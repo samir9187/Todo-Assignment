@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://todo-assignment-xi.vercel.app/",
+    origin: "https://todo-site-c487be.netlify.app/",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "Content-Type, Authorization",
     credentials: true,
