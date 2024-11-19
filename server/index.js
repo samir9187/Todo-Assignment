@@ -10,17 +10,17 @@ dotenv.config();
 
 const app = express();
 
-// app.use(
-//   cors({
-//     // origin: "https://todo-list-fireai.netlify.app",
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     allowedHeaders: "Content-Type, Authorization",
-//     credentials: true,
-//   })
-// );
 app.use(
-  cors()
+  cors({
+    origin: "https://todo-assignment-xi.vercel.app/",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Content-Type, Authorization",
+    credentials: true,
+  })
 );
+// app.use(
+//   cors()
+// );
 
 app.use(bodyParser.json());
 
