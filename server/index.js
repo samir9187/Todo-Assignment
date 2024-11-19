@@ -40,7 +40,11 @@ app.listen(PORT, () => {
 });
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, {
+   
+    serverSelectionTimeoutMS: 30000, // 30 seconds timeout for server selection
+    connectTimeoutMS: 30000, // 30 seconds timeout for connection
+  })
   .then(() => {
     console.log(`MongoDB Atlas Connected !!`);
   })
