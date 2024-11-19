@@ -18,20 +18,10 @@ const app = express();
 //     credentials: true,
 //   })
 // );
-const allowedOrigins = [
- "https://effortless-pastelito-4bd038.netlify.app/"
-];
-
 const corsOptions = {
-  origin: (origin, callback) => {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: 'https://effortless-pastelito-4bd038.netlify.app',  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
+  credentials: true,  
 };
 
 app.use(cors(corsOptions));

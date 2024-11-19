@@ -1,8 +1,3 @@
-
-
-
-
-
 import express from "express";
 import Todo from "../models/Todo.js";
 import authMiddleware from "../middleware/authMiddleware.js";
